@@ -7,8 +7,6 @@ fibonacci_limit = 4
 for i in range(fibonacci_limit):
     fibonacci_photos.append((fibonacci_photos[i][0] + fibonacci_photos[i+1][0], fibonacci_photos[i][0] + fibonacci_photos[i+1][0]))
 
-print(fibonacci_photos)
-
 name = "square.png"
 path = "C:\\Users\\Capsimir\\Desktop\\VisualStudio\\PythonProjects\\PIL\\"
 
