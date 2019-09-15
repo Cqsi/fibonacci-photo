@@ -13,11 +13,12 @@ image1 = Image.open(path + name)
 file_name, ext = os.path.splitext(name)
 
 for i in range(len(fibonacci_photos)):
-    image1.resize(fibonacci_photos[i]).save((path + "converted\\" + "{}_" + str(fibonacci_photos[i][0]) + "{}").format(file_name, ext))
+    #image1.resize(fibonacci_photos[i]).save((path + "converted\\" + "{}_" + str(fibonacci_photos[i][0]) + "{}").format(file_name, ext)
+    image1.resize(fibonacci_photos[i]).save((path + "converted\\" + str(fibonacci_photos[i][0]) + "{}").format(ext))
     image1 = Image.open(path + name)
 
 area_of_image = sum(i[0]*i[0] for i in fibonacci_photos)
-new_image_size = (fibonacci_photos[-1][0], area_of_image/fibonacci_photos[-1][0])
+new_image_size = (fibonacci_photos[-1][0], area_of_image//fibonacci_photos[-1][0])
 
 new_image = Image.new("RGB", new_image_size)
 
