@@ -13,4 +13,21 @@ There's also a geometric interpretation of the Fibonacci sequence. It tells you 
 
 Fibonacci Photo will produce this pattern, but instead of colored squares, you can input an image (only square photos for now) and it will output a new image in this pattern where each square is your inputed image. The photo is then rotated 90 degrees. Quite fun huh?
 
+## Installation Guide
 
+Go to a terminal and do these steps.
+
+
+1. Clone this repository by running `git clone https://github.com/Cqsi/Fibonacci-Photo`
+
+2. Run `cd FibonacciPhoto`
+
+3. Run `pip install -r requirements.txt`
+
+4. Open `defaults.py` in a text editor, and edit the variable in that file to your path of image ( + the limit, but you can just leave it)
+
+5. Run main.py and your photo will be generated in the folder `generated_media`
+
+6. Don't move any folders or code files outside the directories or the program won't work
+
+Have fun!
