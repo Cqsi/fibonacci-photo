@@ -36,4 +36,4 @@ Have fun!
 
 If you run with the default settings in `defaults.py` this photo will be generated in `generated_media`:
 
-![Fibonacci Photo](https://github.com/Cqsi/Fibonacci-Photo/blob/master/test_images/fibonacci_rectangle.png)
+![Fibonacci Photo](https://github.com/Cqsi/Fibonacci-Photo/blob/master/test_images/example.png)
