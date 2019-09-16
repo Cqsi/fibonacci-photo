@@ -1,20 +1,21 @@
 from PIL import Image
 import os
-import image_path
+import defaults
 
-name = image_path.path_of_image
+name = defaults.path_of_image
 path = os.path.dirname(__file__) + "\\"
 fibonacci_photos = [(100, 100), (100, 100)]
-fibonacci_limit = 5
+fibonacci_limit = defaults.fibonacci_limit-3
 
 for i in range(fibonacci_limit):
     fibonacci_photos.append((fibonacci_photos[i][0] + fibonacci_photos[i+1][0], fibonacci_photos[i][0] + fibonacci_photos[i+1][0]))
+
 
 image1 = Image.open(path + name)
 file_name, ext = os.path.splitext(name)
 
 for i in range(len(fibonacci_photos)):
-    #image1.resize(fibonacci_photos[i]).save((path + "converted\\" + "{}_" + str(fibonacci_photos[i][0]) + "{}").format(file_name, ext)
+
     image1.resize(fibonacci_photos[i]).save((path + "converted\\" + str(fibonacci_photos[i][0]) + "{}").format(ext))
     image1 = Image.open(path + name)
 
