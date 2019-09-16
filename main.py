@@ -57,4 +57,5 @@ for i in range(len(fibonacci_photos)-1, -1, -1):
 new_image.save(path + "generated_media\\your_photo.png")
 
 for i in os.listdir(path + "converted\\"):
-    os.remove(path + "converted\\" + i)
+    if i.endswith(".png"):
+        os.remove(path + "converted\\" + i)
