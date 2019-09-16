@@ -1,8 +1,9 @@
 from PIL import Image
 import os
+import image_path
 
-name = "test_images\\square.png"
-path = "C:\\Users\\Capsimir\\Desktop\\VisualStudio\\PythonProjects\\PIL\\"
+name = image_path.path_of_image
+path = os.path.dirname(__file__) + "\\"
 fibonacci_photos = [(100, 100), (100, 100)]
 fibonacci_limit = 5
 
@@ -52,7 +53,7 @@ for i in range(len(fibonacci_photos)-1, -1, -1):
     else:
         print("Something went wrong")
 
-new_image.save(path + "fibonacci_photo\\" + "fibonacci.png")
+new_image.save(path + "generated_media\\your_photo.png")
 
 for i in os.listdir(path + "converted\\"):
     os.remove(path + "converted\\" + i)
