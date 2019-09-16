@@ -1,10 +1,10 @@
 from PIL import Image
 import os
 
-name = "square.png"
+name = "test_images\\square.png"
 path = "C:\\Users\\Capsimir\\Desktop\\VisualStudio\\PythonProjects\\PIL\\"
 fibonacci_photos = [(100, 100), (100, 100)]
-fibonacci_limit = 4
+fibonacci_limit = 5
 
 for i in range(fibonacci_limit):
     fibonacci_photos.append((fibonacci_photos[i][0] + fibonacci_photos[i+1][0], fibonacci_photos[i][0] + fibonacci_photos[i+1][0]))
@@ -28,14 +28,6 @@ new_image = Image.new("RGB", new_image_size)
 # 4 = west
 
 direction = 1
-image_dict = {}
-
-for i in os.listdir(path + "converted\\"):
-    image_name, image_ext = os.path.splitext(i)
-    image_dict[image_name + image_ext] = int(image_name)
-
-#print(image_dict)
-
 x_point = 0
 y_point = 0
 
@@ -60,7 +52,7 @@ for i in range(len(fibonacci_photos)-1, -1, -1):
     else:
         print("Something went wrong")
 
-new_image.show()
-  
-   
-    
+new_image.save(path + "fibonacci_photo\\" + "fibonacci.png")
+
+for i in os.listdir(path + "converted\\"):
+    os.remove(path + "converted\\" + i)
