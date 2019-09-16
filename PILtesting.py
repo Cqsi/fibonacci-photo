@@ -41,22 +41,26 @@ y_point = 0
 
 for i in range(len(fibonacci_photos)-1, -1, -1):
 
-    new_image.paste(Image.open(path + "converted\\" + fibonacci_photos[i][0] + ".png"), (x_point, y_point))
+    new_image.paste(Image.open(path + "converted\\" + str(fibonacci_photos[i][0]) + ".png"), (x_point, y_point))
 
     if direction == 1:
         y_point+=fibonacci_photos[i][0]
         direction+=1
     elif direction == 2:
-        
+        x_point+=fibonacci_photos[i][0]
+        y_point+=fibonacci_photos[i][0]-fibonacci_photos[i-1][0]
+        direction+=1
     elif direction == 3:
-    
+        x_point+=fibonacci_photos[i][0]-fibonacci_photos[i-1][0]
+        y_point-=fibonacci_photos[i-1][0]
+        direction+=1
     elif direction == 4:
-    
+        x_point-=fibonacci_photos[i-1][0]
+        direction=1
     else:
         print("Something went wrong")
 
-#new_image.paste(Image.open(path + "converted\\800.png"), (0,0))
-#new_image.show()
+new_image.show()
   
    
     
