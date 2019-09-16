@@ -36,9 +36,27 @@ for i in os.listdir(path + "converted\\"):
 
 #print(image_dict)
 
-#for i in range(len(fibonacci_photos)-1, -1, -1):
-new_image.paste(Image.open(path + "converted\\800.png"), (0,0))
-new_image.show()
+x_point = 0
+y_point = 0
+
+for i in range(len(fibonacci_photos)-1, -1, -1):
+
+    new_image.paste(Image.open(path + "converted\\" + fibonacci_photos[i][0] + ".png"), (x_point, y_point))
+
+    if direction == 1:
+        y_point+=fibonacci_photos[i][0]
+        direction+=1
+    elif direction == 2:
+        
+    elif direction == 3:
+    
+    elif direction == 4:
+    
+    else:
+        print("Something went wrong")
+
+#new_image.paste(Image.open(path + "converted\\800.png"), (0,0))
+#new_image.show()
   
    
     
