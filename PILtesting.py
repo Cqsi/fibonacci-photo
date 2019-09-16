@@ -21,7 +21,6 @@ area_of_image = sum(i[0]*i[0] for i in fibonacci_photos)
 new_image_size = (fibonacci_photos[-1][0], area_of_image//fibonacci_photos[-1][0])
 
 new_image = Image.new("RGB", new_image_size)
-#new_image.show()
 
 # 1 = south
 # 2 = east
@@ -35,10 +34,11 @@ for i in os.listdir(path + "converted\\"):
     image_name, image_ext = os.path.splitext(i)
     image_dict[image_name + image_ext] = int(image_name)
 
-print(image_dict)
+#print(image_dict)
 
 #for i in range(len(fibonacci_photos)-1, -1, -1):
-
-    
+new_image.paste(Image.open(path + "converted\\800.png"), (0,0))
+new_image.show()
+  
    
     
