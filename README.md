@@ -31,3 +31,9 @@ Go to a terminal and do these steps.
 6. Don't move any folders or code files outside the directories or the program won't work
 
 Have fun!
+
+## Examples
+
+If you run with the default settings in `defaults.py` this photo will be generated in `generated_media`:
+
+![Fibonacci Photo](https://github.com/Cqsi/Fibonacci-Photo/blob/master/test_images/fibonacci_rectangle.png)
