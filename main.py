@@ -4,8 +4,17 @@ import defaults
 
 name = defaults.path_of_image
 path = os.path.dirname(__file__) + "\\"
+
 fibonacci_photos = [(100, 100), (100, 100)]
 fibonacci_limit = defaults.fibonacci_limit-3
+
+vertical_rectangle = defaults.vertical_rectangle
+
+# 1 = south
+# 2 = east
+# 3 = north
+# 4 = west
+direction = 1
 
 for i in range(fibonacci_limit):
     fibonacci_photos.append((fibonacci_photos[i][0] + fibonacci_photos[i+1][0], fibonacci_photos[i][0] + fibonacci_photos[i+1][0]))
@@ -20,16 +29,15 @@ for i in range(len(fibonacci_photos)):
     image1 = Image.open(path + name)
 
 area_of_image = sum(i[0]*i[0] for i in fibonacci_photos)
-new_image_size = (fibonacci_photos[-1][0], area_of_image//fibonacci_photos[-1][0])
+
+if vertical_rectangle:
+    new_image_size = (fibonacci_photos[-1][0], area_of_image//fibonacci_photos[-1][0])
+else:
+    new_image_size = (area_of_image//fibonacci_photos[-1][0], fibonacci_photos[-1][0])
+    direction = 2
 
 new_image = Image.new("RGB", new_image_size)
 
-# 1 = south
-# 2 = east
-# 3 = north
-# 4 = west
-
-direction = 1
 x_point = 0
 y_point = 0
 
