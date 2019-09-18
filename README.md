@@ -1,4 +1,4 @@
-# Fibonacci Photo v1.0
+# Fibonacci Photo v1.1
 
 ## **Info**
 Fibonacci was an Italian mathematician that lived lived in the 12th century. He is regarded as one of the biggest mathematicians ever because of his work on numbers. One of his most notable works is the so called Fibonacci Sequence. It follows two simple rules:
